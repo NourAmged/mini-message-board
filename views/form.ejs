@@ -10,13 +10,15 @@
     <nav>
       <p>MMB Wall</p>
       <p>#Number of Messages</p>
-      <button class="go-back-btn"><a href="/">go Back</a></button>
+            <a href="/">
+        <button class="go-back-btn">go Back</button>
+      </a>
     </nav>
     <div class="message-post">
       <p>Post a message !</p>
-      <form action="POST" action="/new">
-        <input type="text" id="name" required placeholder="Name">
-        <textarea id="message" required placeholder="Message" rows="8" cols="33"></textarea>
+      <form method="POST" action="/new">
+        <input type="text" name="name" id="name" required placeholder="Name">
+        <textarea id="message" name="message" required placeholder="Message" rows="8" cols="33"></textarea>
         <input class="submit-btn" type="submit" value="Submit">
       </form>
     </div>
