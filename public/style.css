@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -22,6 +27,13 @@ main {
     gap: 2rem;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 400px;
+}
+
 .message {
     display: flex;
     justify-content: center;
@@ -33,8 +45,25 @@ main {
     font-weight: 600;
 }
 
-.new-message-btn {
+.new-message-btn, .go-back-btn {
     padding: 8px 10px;
     border: none;
     cursor: pointer;
+    border-radius: px;
+}
+
+.message-post {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4em;
+    gap: 22px;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-btn {
+    cursor: pointer;
+    padding: 8px 10px;
+    font-size: 18px;
 }
