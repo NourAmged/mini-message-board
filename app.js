@@ -3,6 +3,7 @@ const path = require("node:path");
 
 const indexRouter = require('./routes/indexRouter');
 const newMessageRouter = require('./routes/newMessageRouter');
+const messageRouter = require("./routes/messageRouter");
 
 const PORT = 3000;
 
@@ -17,6 +18,7 @@ app.use(express.static(assetsPath));
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/new', newMessageRouter);
+app.use('/message', messageRouter);
 app.use('/', indexRouter);
 
 app.listen(PORT, () => {

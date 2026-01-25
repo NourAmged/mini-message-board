@@ -9,14 +9,19 @@
   <body>
     <nav>
       <p>MMB Wall</p>
-      <p>#Number of Messages</p>
+      <p>Total Messages <%= messagesNum %></p>
       <a href="/new">
         <button class="new-message-btn">New Message</button>
       </a>
     </nav>
     <main>
-      <% messages.forEach((message) => { %>
-      <div class="message"><%= message.user %></div>
+      <% messages.forEach((message, idx) => { %>
+      <div class="message">
+        <%= message.user %>
+        <a href="/message/<%= idx %>">
+          <button class="open-message-btn">Open</button>
+        </a>
+      </div>
       <% }); %>
     </main>
   </body>

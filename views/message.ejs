@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Message</title>
+  </head>
+  <body>
+    <nav>
+      <p>MMB Wall</p>
+      <p>Message</p>
+      <a href="/">
+        <button class="go-back-btn">go Back</button>
+      </a>
+    </nav>
+    <div class="container">
+      <div class="detailed-message">
+        <p class="header">
+          <span><%= message.user %></span>
+          <span><%= message.added.toDateString()%></span>
+        </p>
+        <p><%= message.text %></p>
+      </div>
+    </div>
+  </body>
+</html>
