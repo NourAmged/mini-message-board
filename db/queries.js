@@ -10,7 +10,13 @@ async function DetailedMessage(messageId) {
     return rows
 }
 
+async function insertMessage(message) {
+    const { username, text } = message;
+    await pool.query("INSERT INTO messages (username, text) VALUES ($1, $2)", [username, text]);
+}
+
 module.exports = {
     Messages,
-    DetailedMessage
+    DetailedMessage,
+    insertMessage
 }

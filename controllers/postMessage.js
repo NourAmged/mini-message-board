@@ -1,11 +1,8 @@
-const messages = require("../messages");
+const { insertMessage } = require("../db/queries");
 
-function postMessage(req, res){
-    messages.push({
-        text: req.body.message,
-        user: req.body.name,
-        added: new Date()
-    });
+async function postMessage(req, res) {
+
+    await insertMessage(req.body);
 
     res.redirect("/");
 }
