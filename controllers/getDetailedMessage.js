@@ -1,8 +1,9 @@
-const messages = require("../messages");
+const { DetailedMessage } = require("../db/queries")
 
-function getDetailedMessage(req, res) {
+async function getDetailedMessage(req, res) {
     const { messageId } = req.params;
-    res.render('message', { message: messages[messageId] })
+    const [message] = await DetailedMessage(messageId);
+    res.render('message', { message: message })
 }
 
 module.exports = getDetailedMessage;

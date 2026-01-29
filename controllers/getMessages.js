@@ -1,6 +1,7 @@
-const messages = require("../messages");
+const { Messages } = require("../db/queries");
 
-function getMessages(req, res) {
+async function getMessages(req, res) {
+    const messages = await Messages();
     res.render("index", { messages: messages, messagesNum: messages.length });
 }
 

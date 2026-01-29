@@ -15,10 +15,10 @@
       </a>
     </nav>
     <main>
-      <% messages.forEach((message, idx) => { %>
+      <% messages.forEach((message) => { %>
       <div class="message">
-        <%= message.user %>
-        <a href="/message/<%= idx %>">
+        <%= message.username %>
+        <a href="/message/<%= message.id %>">
           <button class="open-message-btn">Open</button>
         </a>
       </div>

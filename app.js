@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const path = require("node:path");
 
@@ -5,7 +7,7 @@ const indexRouter = require('./routes/indexRouter');
 const newMessageRouter = require('./routes/newMessageRouter');
 const messageRouter = require("./routes/messageRouter");
 
-const PORT = 3000;
+const PORT = process.env.PORT_APP;
 
 const app = express();
 
