@@ -10,16 +10,36 @@
     <nav>
       <p>MMB Wall</p>
       <p>New Message</p>
-            <a href="/">
+      <a href="/">
         <button class="go-back-btn">go Back</button>
       </a>
     </nav>
     <div class="message-post">
       <p>Post a message !</p>
+      <% if (locals.errors) {%>
+      <ul>
+        <% errors.forEach(function(error) { %>
+        <li><%= error.msg %></li>
+        <% }); %>
+      </ul>
+      <% } %>
       <form method="POST" action="/new">
-        <input type="text" name="username" id="username" required placeholder="Name">
-        <textarea id="text" name="text" required placeholder="Message" rows="8" cols="33"></textarea>
-        <input class="submit-btn" type="submit" value="Submit">
+        <input
+          type="text"
+          name="username"
+          id="username"
+          required
+          placeholder="Name"
+        />
+        <textarea
+          id="text"
+          name="text"
+          required
+          placeholder="Message"
+          rows="8"
+          cols="33"
+        ></textarea>
+        <input class="submit-btn" type="submit" value="Submit" />
       </form>
     </div>
   </body>
