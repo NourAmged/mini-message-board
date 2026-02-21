@@ -2,6 +2,8 @@
 
 The Mini Message Board is a simple web application that allows users to post and view messages. It is built using Node.js, Express.js, and PostgreSQL, and it uses EJS as the templating engine for rendering views.
 
+![screenshot](screenshot.png)
+
 ## Features
 
 - View a list of messages.
